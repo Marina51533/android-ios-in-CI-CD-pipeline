@@ -27,7 +27,7 @@ export const config: Options.Testrunner = {
 
   port: 4724,
 
-  specs: ["test/specs/**/example-test.spec.ts"],
+  specs: ["test/specs/**/*.spec.ts"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
