@@ -1,5 +1,5 @@
 import LoginScreen from "../screen-objects/login.screen.android.js";
-// import HomeScreen from "../screen-objects/home.screen.android.js";
+import HomeScreen from "../screen-objects/home.screen.android.js";
 
 describe("Example tests", function () {
   beforeEach(async function () {
@@ -16,20 +16,20 @@ describe("Example tests", function () {
     console.log('Screen is visible')
   });
 
-  // it("login button is visible", async function () {
-  //   await expect(await LoginScreen.loginButton).toBeDisplayed();
-  // });
+  it("login button is visible", async function () {
+    await expect(await LoginScreen.loginButton).toBeDisplayed();
+  });
 
-  // it("signup button is visible", async function () {
-  //   await expect(await LoginScreen.signupButton).toBeDisplayed();
-  // });
+  it("signup button is visible", async function () {
+    await expect(await LoginScreen.signupButton).toBeDisplayed();
+  });
 
-  // it("skip login button is visible", async function () {
-  //   await expect(await LoginScreen.skipLoginButton).toBeDisplayed();
-  // });
+  it("skip login button is visible", async function () {
+    await expect(await LoginScreen.skipLoginButton).toBeDisplayed();
+  });
 
-  // it("skip login will display local title screen", async function () {
-  //   await LoginScreen.skipLoginButton.click();
-  //   await expect(await HomeScreen.localTitleScreen).toBeDisplayed();
-  // });
+  it("skip login will display local title screen", async function () {
+    await LoginScreen.skipLoginButton.click();
+    await expect(await HomeScreen.localTitleScreen).toBeDisplayed();
+  });
 });
