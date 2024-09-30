@@ -9,11 +9,13 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v3 # The latest stable version is v3, not v4
-      - uses: futureware-tech/simulator-action@v3
-        with:
-          model: 'iPhone 14'
-          os: '17.4'
+      - name: List available devices and runtimes
+        run: xcrun simctl list --json devices available
+    #   - uses: actions/checkout@v3 
+    #   - uses: futureware-tech/simulator-action@v3
+    #     with:
+    #       model: 'iPhone 14'
+    #       os: '17.4'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
