@@ -1,0 +1,33 @@
+name: Automated iOS Tests
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  tests:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3 # The latest stable version is v3, not v4
+      - uses: futureware-tech/simulator-action@v3
+        with:
+          model: 'iPhone 11'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install npm packages
+        run: npm ci
+
+      - name: setup appium
+        run: |
+          npm install -g appium@v2
+          appium -v
+          appium &>/dev/null &
+
+
+
