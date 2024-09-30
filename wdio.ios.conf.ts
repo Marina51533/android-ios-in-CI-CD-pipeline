@@ -147,7 +147,7 @@ export const config: Options.Testrunner = {
    * @param {string} commandName hook command name
    * @param {Array} args arguments that command would receive
    */
-  // beforeCommand: function (commandName, args) {
+  // beforeCommand: function (commandName
   // },
   /**
    * Hook that gets executed before the suite starts
