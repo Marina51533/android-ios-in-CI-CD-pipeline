@@ -11,7 +11,7 @@ describe("Example tests", function () {
     await LoginScreen.terminateApp();
   });
 
-  it("login screen is visible", async function () {
+  it("login screen is visible and", async function () {
     await expect(await LoginScreen.scrollView).toBeDisplayed();
   });
 
