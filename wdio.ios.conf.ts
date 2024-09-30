@@ -11,7 +11,6 @@ const video = import("wdio-video-reporter");
 let reportAggregator: ReportAggregator;
 
 export const config: Options.Testrunner = {
-
   runner: "local",
   autoCompileOpts: {
     autoCompile: true,
@@ -22,9 +21,10 @@ export const config: Options.Testrunner = {
   },
 
   port: 4724,
-  
+  specs: ["test/specs/**/example-test.ios.spec.ts"],
+
   maxInstances: 1,
- 
+
   capabilities: [
     {
       // capabilities for local Appium web tests on an IOS Emulator
@@ -35,7 +35,6 @@ export const config: Options.Testrunner = {
     },
   ],
 
-
   logLevel: "error",
 
   bail: 0,
@@ -45,7 +44,7 @@ export const config: Options.Testrunner = {
   connectionRetryTimeout: 120000,
 
   connectionRetryCount: 3,
- 
+
   services: [
     [
       "appium",
@@ -56,7 +55,6 @@ export const config: Options.Testrunner = {
       },
     ],
   ],
-
 
   framework: "mocha",
 
@@ -89,7 +87,6 @@ export const config: Options.Testrunner = {
     ui: "bdd",
     timeout: 60000,
   },
-
 
   /**
    * Gets executed once before all workers get launched.
