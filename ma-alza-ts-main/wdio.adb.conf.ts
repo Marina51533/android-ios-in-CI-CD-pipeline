@@ -72,8 +72,8 @@ export const config: Options.Testrunner = {
     {
       // capabilities for local Appium web tests on an Android Emulator
       platformName: "Android",
-      "appium:platformVersion": "14.0",
-      "appium:deviceName": "Samsung Galaxy 23",
+      "appium:platformVersion": "13.0",
+      "appium:deviceName": "Pixel 4",
       "appium:automationName": "UIAutomator2",
       "appium:appPackage": "cz.alza.eshop",
       "appium:appActivity":
