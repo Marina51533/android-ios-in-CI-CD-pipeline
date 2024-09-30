@@ -73,6 +73,7 @@ export const config: Options.Testrunner = {
       // capabilities for local Appium web tests on an IOS Emulator
       platformName: "ios",
       "appium:automationName": "XCUITest",
+      "appium:udid": "99276BE1-7DEA-49AF-BC63-A97CFFA394D7",
       "appium:appPackage": "cz.alza.eshop",
       "appium:bundleId": "com.apple.Preferences",
       "appium:app": resolve(process.cwd(), "./data/alza.apk"),
